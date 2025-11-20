@@ -1,0 +1,22 @@
+{
+  "name": "flappy-html5-bird",
+  "version": "1.0.0",
+  "description": "HTML5 Flappy Bird game built with CoffeeScript, jQuery, and SCSS",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "dev": "npx http-server -p 8080 -o -c-1"
+  },
+  "keywords": [
+    "flappy-bird",
+    "html5",
+    "game",
+    "coffeescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+

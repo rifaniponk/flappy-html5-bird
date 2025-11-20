@@ -1,23 +1,120 @@
-flappy-html5-bird
-=================
+# Flappy HTML5 Bird 🐦
 
-### 这是啥？
+A faithful HTML5 recreation of the classic Flappy Bird game, built with CoffeeScript, jQuery, and SCSS.
 
-这是 flappy bird 的 html5 版本。除了 jQuery 没有用什么其他框架。很基础。
+![Game Preview](cover.png)
 
+## Features
 
-### try it
+- 🎮 Classic Flappy Bird gameplay
+- 🎨 Original game graphics and animations
+- 📱 Responsive canvas-based rendering
+- ⚡ Smooth animations using CSS keyframes
+- 🏆 Score tracking with high score system
 
-在这里试玩：
-http://ben7th.github.io/flappy-html5-bird/
+## Tech Stack
 
+- **HTML5** - Game structure
+- **CoffeeScript** - Game logic (475 lines)
+- **SCSS/CSS** - Styling and animations (380 lines)
+- **jQuery** - DOM manipulation
+- **Canvas/Sprites** - Game graphics
 
-### change log
+## Prerequisites
 
-2014.02.16 - 0.0.3<br/>
-将鸟翅膀上下扇动的动作改为纯CSS3实现，以提升效率；<br/>
-略微加快了鸟翅膀上下扇动的速度(0.4s to 0.3s)<br/>
-略微扩大了管子开口随机的范围(上下各增加了10像素)<br/>
+- Node.js (v14 or higher)
+- npm or yarn
+- Modern web browser (Chrome, Firefox, Safari, or Edge)
 
-2014.02.17 - 0.0.4<br/>
-调整了一些场景数值<br/>
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ben7th/flappy-html5-bird.git
+cd flappy-html5-bird
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## Running the Game
+
+### Option 1: Using npm (Recommended)
+
+Start the development server:
+```bash
+npm start
+```
+
+This will automatically open the game in your default browser at `http://localhost:8080`
+
+### Option 2: Using npm dev mode
+
+For development with cache disabled:
+```bash
+npm run dev
+```
+
+### Option 3: Direct file access
+
+You can also open `index.html` directly in your browser, but some browsers may restrict local file access. Using the http-server method above is recommended.
+
+### Option 4: Using Python's built-in server
+
+If you don't want to install npm dependencies:
+```bash
+# Python 3
+python -m http.server 8080
+
+# Python 2
+python -m SimpleHTTPServer 8080
+```
+
+Then open `http://localhost:8080` in your browser.
+
+## How to Play
+
+1. Click or press any key to start the game
+2. Click or press any key to make the bird flap its wings
+3. Avoid the pipes and the ground
+4. Try to get the highest score possible!
+
+## Project Structure
+
+```
+flappy-html5-bird/
+├── index.html              # Main HTML file
+├── cover.png               # Game preview image
+├── ui/
+│   ├── bird.css            # Compiled CSS (generated from SCSS)
+│   ├── bird.scss           # Game styles and animations
+│   ├── bird.js.coffee      # Game logic in CoffeeScript
+│   ├── document.css        # Document styles
+│   ├── document.scss       # Document SCSS source
+│   ├── images/             # Game sprites and graphics
+│   │   ├── bird.png
+│   │   ├── pipe_*.png
+│   │   ├── stage_*.png
+│   │   └── ...
+│   └── lib/                # External libraries
+│       ├── coffee-script.js
+│       └── jquery-2.1.0.min.js
+├── package.json            # Node.js dependencies
+└── README.md              # This file
+```
+
+## Development
+
+The game uses CoffeeScript which is compiled in the browser using `coffee-script.js`. If you want to modify the game logic:
+
+1. Edit `ui/bird.js.coffee`
+2. Refresh your browser - the CoffeeScript compiler will handle the compilation automatically
+
+For styling changes:
+
+1. Edit `ui/bird.scss` or `ui/document.scss`
+2. Compile SCSS to CSS using your preferred method (sass, node-sass, etc.)
+3. Or edit the compiled `.css` files directly for quick changes
+
